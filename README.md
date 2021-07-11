@@ -43,3 +43,11 @@ ext_modules = [
 setup(name="Demos",
       ext_modules=cythonize(ext_modules))
 ```
+
+# 常见的问题
+在写setup.py的过程中，顺序很重要
+`error: each element of 'ext_modules' option must be an Extension instance or 2-tuple`
+```python
+from setuptools import setup
+from Cython.Build import cythonize
+```
